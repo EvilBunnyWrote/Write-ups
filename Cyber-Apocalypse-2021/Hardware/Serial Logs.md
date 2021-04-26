@@ -33,26 +33,27 @@ What do we see?
 
 ![signals](files/signals.png)
 
-Based on next facts:
+Based on the next facts:
 * physical access to the debugging interface .. on a Raspberry Pi-based IoT device
-* name of task "Serial logs"
+* name of the task "Serial logs"
 Select "Async serial" analyzer.
 
 ![analyzer](files/analyzer_conf.png)
 
-We should select Channel 1 in "Input Channel", because as we can see we have signals only on first channel.
-In "Bit Rate" we should add speed of connection.
-Who works with Raspberry Pi through serial port, knows, speed is 115200. Insert it in "Bit Rate" and click "Save".
-Switch "Data" field to "Terminal" for showing as raw data as it was transfered, not in table view.
+We should select Channel 1 in “Input Channel” because as we can see we have signals only on the first channel.
+In “Bit Rate” we should add the speed of the connection.
+Who works with Raspberry Pi through the serial port, knows, speed is 115200. Insert it in “Bit Rate” and click “Save”.
+Switch the “Data” field to “Terminal” for showing as raw data as it was transferred, not in a table view.
 
 ![data](files/data_view.png)
 
 As we can see it is a log of connections to the Access Control System which is based on a Raspberry Pi-based IoT device.
-But in one place it change and last readeble message is ```Swithcing baud to backup value```
-It means we should gues baud or bitrate for reading last part of logs.
-Someone can understad how change bitrate based on a signal:
+But in one place it changes and the last readable message is ```Switching baud to backup value```
+It means we should gues baud or bitrate for reading the last part of the logs.
+Someone can understand how to change bitrate based on a signal:
 
 ![signals](files/biger_signals.png)
+
 But not me, I just brute-force it, based on possible values for serial port, which found on wiki ;)
 (Serial port)[https://en.wikipedia.org/wiki/Serial_port ]
 Change value of "Bit Rate" to 76,800 and check "Data" field again.
@@ -66,4 +67,3 @@ Flag: ```CHTB{wh47?!_f23qu3ncy_h0pp1n9_1n_4_532141_p2070c01?!!!52}```
 
   - use Logic 2 from https://www.saleae.com/ 
   - Brute-force bit rate
-

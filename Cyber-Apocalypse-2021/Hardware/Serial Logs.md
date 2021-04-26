@@ -53,8 +53,7 @@ It means we should gues baud or bitrate for reading last part of logs.
 Someone can understad how change bitrate based on a signal:
 
 ![signals](files/biger_signals.png)
-
-But not me, I just brute-force it, based on possible values for serial port, which found on wiki ;) 
+But not me, I just brute-force it, based on possible values for serial port, which found on wiki ;)
 (Serial port)[https://en.wikipedia.org/wiki/Serial_port ]
 Change value of "Bit Rate" to 76,800 and check "Data" field again.
 Scroll down and see:
@@ -67,3 +66,4 @@ Flag: ```CHTB{wh47?!_f23qu3ncy_h0pp1n9_1n_4_532141_p2070c01?!!!52}```
 
   - use Logic 2 from https://www.saleae.com/ 
   - Brute-force bit rate
+

@@ -1,4 +1,3 @@
-##Discovery
 [task file](files/forensics_low_energy_crypto.zip)
 
 Unpack file and open pcap in wireshark

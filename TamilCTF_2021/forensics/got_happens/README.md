@@ -12,7 +12,7 @@ Check what we have in commits history
 ![img.png](files/commit.png)
 reverse it but it's a fake flag, so move forward
 ![img.png](files/commit2.png)
-looks that we got something useful, trying to decode from hex, see base64 data but docoding gives nothing useful, so remembering that fake flag was reversed trying to reverse base64 text.<br>
+looks that we got something useful, trying to decode from hex, see base64 data but decoding gives nothing useful, so remembering that fake flag was reversed trying to reverse base64 text.<br>
 So now it looks better and contains some visible PKZip header signatures<br>
 Cyber chef is useful for playing with various transformations
 ![img.png](files/cyberchef.png)
@@ -56,7 +56,7 @@ So, let split or file for already identified parts
 ![img_12.png](files/img_12.png)
 Ok, we identified the most parts and as we remember we have first part unfinished with 5 bytes missing of extrafield 0x7875h
 
-Let try t find information about that field, first link in google give us information 
+Let try to find information about that field, first link in google gives us information 
 ![img_13.png](files/img_13.png)
 
 So, we are missing one byte size and GID which in our case should be 5 bytes and judging by other headers it has value ```\x04 \x00 \x00 \x00 \x00``` and we can find it right after Central directory file block and also we see file data after it

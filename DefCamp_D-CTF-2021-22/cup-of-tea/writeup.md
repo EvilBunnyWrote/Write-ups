@@ -192,6 +192,7 @@ it has type `uint32_t * `
 Having all this in mind, lets make simple C++ application to do encryption/decryption. 
 I used Visual Studio 2017 to create a simple Console Application in C++, copied `xxtea.{c,h}` to it
 and added to the project:
+
 ![project_structure](./project_structure.png)
 
 **I selected 64-bit target in Visual Studio**
